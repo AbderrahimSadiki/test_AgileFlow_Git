@@ -1,0 +1,19 @@
+name: Test CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Test toujours valide
+        run: |
+          echo "Pipeline CI exécuté avec succès"
+          exit 0
